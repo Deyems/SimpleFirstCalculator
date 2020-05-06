@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mini Apps </title>
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="appContain">
+        <form id="simpleapp" name="simpleapp">
+          <div class="heading"><h2>Calculator App</h2></div>
+          <div class="output"></div>
+
+          <div class="entry">
+            <label for="firstDigit">First Input</label>
+            <input type="text" id="firstDigit" placeholder='Enter a valid Integer' name="firstDigit">
+          </div>
+          <div class="entry">
+            <label for="secondDigit">Second Input</label>
+            <input type="text" id="secondDigit" placeholder='Enter a valid Integer' name="secondDigit">
+          </div>
+
+          <div class="btns">
+            <button type="submit" id='sum' name="sum">Sum</button>
+            <button type="submit" id='product' name="product">Product</button>
+            <button type="submit" id='division' name="division">Divide</button>
+            <button type="submit" id='difference' name="difference">Difference</button>
+            <button type="submit" id='allGen' name="allGen">Generate All</button>
+          </div>
+
+        </form>
+        <div class="footer">&copy Adeyemi Sola</div>
+
+      </div>
+    </div>
+  </body>
+  <style media="screen">
+
+    .wrapper{
+      width: 80vw;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+    }
+    .error{
+      background: #900;
+      color: white;
+      transition: all 0.9s;
+    }
+    .heading{
+      background: skyblue;
+      color: white;
+      text-align: center;
+      padding: 5px;
+    }
+    .output{
+      min-height: 30px;
+      display: none;
+    }
+    .appContain{
+      width: 80vw;
+      margin: auto;
+      padding: 5px;
+      min-height: 60vh;
+      box-shadow: 0 0 5px #ddd;
+      border-radius: 4px 4px 0 0;
+    }
+    .entry{
+      display: flex;
+      margin: 5px auto;
+    }
+    .entry>label{
+      flex: 1;
+    }
+    .entry>input{
+      flex: 2;
+    }
+    input{
+      height: 25px;
+      width: 70px;
+      padding: 5px;
+    }
+
+    input:focus{
+      outline: none;
+    }
+
+    .btns{
+      display: flex;
+      flex-wrap: wrap;
+
+    }
+    button{
+      outline: none;
+      border: 0;
+      color: white;
+      padding: 10px;
+      font-size: 0.9rem;
+      margin: 10px 5px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: Helvetica, sans-serif;
+      /*box-shadow: 0 0 5px rgba(20,20,90,0.4);*/
+    }
+    /*button:hover{
+      background-color: pink;
+    }*/
+    #sum{background:green;}
+    #product{background: orange;}
+    #difference{background: tomato;}
+    #division{background: purple;}
+    #allGen{background: #ccc;}
+    .footer{
+      background: skyblue;
+      color: white;
+      height: 40px;
+      text-align: center;
+      vertical-align: middle;
+    }
+  </style>
+  <script src="main.js"></script>
+</html>
